@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build main.c with libcurl",
+            "type": "shell",
+            "command": "C:/msys64/mingw64/bin/gcc.exe",
+            "args": [
+                "-std=c17",
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "main.c",
+                "-o",
+                "main.exe",
+                "-lcurl"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:/msys64/mingw64/bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
